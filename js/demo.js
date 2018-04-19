@@ -269,7 +269,7 @@ app.directive('dragMe', ['$drag', function($drag) {
 // For this trivial demo we have just a unique MainController
 // for everything
 //
-app.controller('MainController', function($rootScope, $scope) {
+app.controller('MainController', function($rootScope, $scope , $cordovaToast) {
 
   $scope.toastMessage = 'enter a message';
 
