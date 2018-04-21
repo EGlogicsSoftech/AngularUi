@@ -75,6 +75,7 @@
     </platform>
   
   <plugin name="cordova-plugin-x-toast" source="npm" />
+  <plugin name="cordova-plugin-statusbar" spec="~2.4.2" />
 
 
   
