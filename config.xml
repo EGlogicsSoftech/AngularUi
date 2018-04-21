@@ -23,6 +23,18 @@
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
   
+  <!-- for iOS -->
+<feature name="SocialSharing">
+  <param name="ios-package" value="SocialSharing" />
+</feature>
+
+<!-- for Android (you will find one in res/xml) -->
+<feature name="SocialSharing">
+  <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+</feature>
+
+
+  
  	<preference name="StatusBarOverlaysWebView" value="false" />
 	<preference name="StatusBarBackgroundColor" value="#209dc2"/>
 	<preference name="StatusBarStyle" value="lightcontent" />
@@ -76,6 +88,7 @@
   
   <plugin name="cordova-plugin-x-toast" source="npm" />
   <plugin name="cordova-plugin-statusbar" spec="~2.4.2" />
+  <plugin name="nl.x-services.plugins.socialsharing" version="4.3.16" />
 
 
   
