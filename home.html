@@ -16,6 +16,7 @@
 			</button>
 	</div>
 		
+	<button >message only</button>
     <div class="list-group text-center">
       <div class="list-group-item list-group-item-home">
         <h1>Mobile Angular UI
@@ -23,24 +24,19 @@
         </h1>
       </div>
       <div class="list-group-item list-group-item-home">
-        <div>
-          <i class="fa fa-gamepad feature-icon text-primary"></i>
-        </div>
-        <div>
-            <h3 class="home-heading">Play around a little</h3>
-            Open the sidebar and start testing features
-        </div>
+        	
+        	
+        	 <button class="btn btn-primary btn-block" onclick="window.plugins.socialsharing.share('Message only')" >Share This</button>
+    
       </div>
 
 
       <div class="list-group-item list-group-item-home">
-        <div>
-          <i class="fa fa-tachometer feature-icon  text-primary"></i>
-        </div>
-        <div>
-            <h3 class="home-heading">Test responsiveness and speed</h3>
-            Scroll, tap, navigate, test that everything is smooth
-        </div>
+        	
+        	<button class="btn btn-primary btn-block" ng-click="center(toastMessage)">Center Toast</button>
+        	<button class="btn btn-primary btn-block" ng-click="top(toastMessage)">Top Toast</button>
+        	<button class="btn btn-primary btn-block" ng-click="bottom(toastMessage)">Bottom Toast</button>
+        	
       </div>
 
 
