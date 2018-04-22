@@ -36,8 +36,8 @@
 
   
  	<preference name="StatusBarOverlaysWebView" value="true" />
-	<preference name="StatusBarBackgroundColor" value="#000000"/>
 	<preference name="StatusBarStyle" value="lightcontent" />
+	<preference name="StatusBarBackgroundColor" value="#000000"/>
   
   <platform name="android">
     <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
