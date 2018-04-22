@@ -10,7 +10,6 @@ var app = angular.module('MobileAngularUiExamples', [
   'ngRoute',
   'mobile-angular-ui',
   'ngCordova',
-  'infinite-scroll',
 
   // touch/drag feature: this is from 'mobile-angular-ui.gestures.js'.
   // This is intended to provide a flexible, integrated and and
