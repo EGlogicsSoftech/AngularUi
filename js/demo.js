@@ -10,6 +10,7 @@ var app = angular.module('MobileAngularUiExamples', [
   'ngRoute',
   'mobile-angular-ui',
   'ngCordova',
+  'infinite-scroll',
 
   // touch/drag feature: this is from 'mobile-angular-ui.gestures.js'.
   // This is intended to provide a flexible, integrated and and
@@ -47,6 +48,32 @@ app.config(function($routeProvider) {
 //
 // `$touch example`
 //
+
+// Reddit constructor function to encapsulate HTTP and pagination logic
+myApp.factory('Wordpress', function($http) {
+  var Wordpress = function() {
+    this.items = [];
+    this.busy = false;
+    this.after = '';
+  };
+
+  Wordpress.prototype.nextPage = function() {
+    if (this.busy) return;
+    this.busy = true;
+
+    var url = "https://www.realtymyths.com/api/get_recent_posts/?jsonp=JSON_CALLBACK";
+    $http.jsonp(url).success(function(data) {
+      var items = data.data.children;
+      for (var i = 0; i < items.length; i++) {
+        this.items.push(items[i].data);
+      }
+      //this.after = "t3_" + this.items[this.items.length - 1].id;
+      this.busy = false;
+    }.bind(this));
+  };
+
+  return Wordpress;
+});
 
 app.directive('toucharea', ['$touch', function($touch) {
   // Runs during compile
@@ -270,9 +297,11 @@ app.directive('dragMe', ['$drag', function($drag) {
 // For this trivial demo we have just a unique MainController
 // for everything
 //
-app.controller('MainController', function($rootScope, $scope , $cordovaToast) {
+app.controller('MainController', function($rootScope, $scope , $cordovaToast, Wordpress) {
 
-  $scope.toastMessage = 'enter a message';
+  	$scope.wordpress = new Wordpress();
+  	
+  	$scope.toastMessage = 'enter a message';
 
     $scope.center = function (message) {
       $cordovaToast.show(message, 'long', 'center')
