@@ -62,10 +62,10 @@ app.factory('Wordpress', function($http) {
 
     var url = "https://www.realtymyths.com/api/get_recent_posts/?jsonp=JSON_CALLBACK";
     $http.jsonp(url).success(function(data) {
-      var items = data.data.children;
-      for (var i = 0; i < items.length; i++) {
+      var items = data.posts;
+      /*for (var i = 0; i < items.length; i++) {
         this.items.push(items[i].data);
-      }
+      }*/
       //this.after = "t3_" + this.items[this.items.length - 1].id;
       this.busy = false;
     }.bind(this));
