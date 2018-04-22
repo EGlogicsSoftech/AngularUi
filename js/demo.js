@@ -50,7 +50,7 @@ app.config(function($routeProvider) {
 //
 
 // Reddit constructor function to encapsulate HTTP and pagination logic
-myApp.factory('Wordpress', function($http) {
+app.factory('Wordpress', function($http) {
   var Wordpress = function() {
     this.items = [];
     this.busy = false;
