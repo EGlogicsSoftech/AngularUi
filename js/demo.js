@@ -57,7 +57,7 @@ app.factory('Wordpress', function($http) {
     this.after = '';
   };
 
-  Wordpress.prototype.nextPage = function() {
+  Wordpress.prototype.loadMore = function() {
     if (this.busy) return;
     this.busy = true;
 
