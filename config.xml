@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.angularp.app" version="0.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Angular Ui Demo</name>
+<widget id="com.f7.app" version="0.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>F7 Demo</name>
   <description>
-       APP DESIGN DEMO
+       F7 APP DESIGN DEMO
   </description>
   <author email="info@eglogics.com" href="http://eglogics.com/">
    EGlogics Team
